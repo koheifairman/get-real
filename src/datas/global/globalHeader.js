@@ -1,3 +1,3 @@
-const heading = "現実チェック";
+const heading = '現実チェック';
 
-export {heading};
+export { heading };

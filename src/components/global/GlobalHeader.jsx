@@ -1,20 +1,14 @@
-import { useRouter } from "next/router";
+import NextLink from 'next/link';
 
-import { heading } from "@/datas/global/globalHeader";
+import { heading } from '@/datas/global/globalHeader';
 
+// https://nextjs-ja-translation-docs.vercel.app/docs/api-reference/next/link
 const GlobalHeader = () => {
-  // ステート
-  const router = useRouter();
-  // 関数
-  const clickRouter = () => {
-    router.push(`/`);
-  };
-
   return (
     <div className="global-header">
-      <div className="global-header-title" onClick={() => clickRouter()}>
+      <NextLink className="global-header-title" href={'/'}>
         {heading}
-      </div>
+      </NextLink>
       <style jsx>{`
         .global-header {
           display: flex;
@@ -36,4 +30,4 @@ const GlobalHeader = () => {
 };
 export default GlobalHeader;
 
-GlobalHeader.displayName = "../components/GlobalHeader";
+GlobalHeader.displayName = '../components/GlobalHeader';

@@ -1,31 +1,31 @@
-import instagramIcon from "../../../public/footer/instagram.svg";
-import tiktokIcon from "../../../public/footer/tiktok.svg";
-import youtubeIcon from "../../../public/footer/youtube.svg";
-import xIcon from "../../../public/footer/x.svg";
+import instagramIcon from '../../../public/footer/instagram.svg';
+import tiktokIcon from '../../../public/footer/tiktok.svg';
+import youtubeIcon from '../../../public/footer/youtube.svg';
+import xIcon from '../../../public/footer/x.svg';
 
-const copyright = "© 2024 All rights reserved.";
+const copyright = '© 2024 All rights reserved.';
 
 const icons = [
   {
     id: 1,
-    label: "instagram",
+    label: 'instagram',
     src: instagramIcon,
   },
   {
     id: 2,
-    label: "tiktok",
+    label: 'tiktok',
     src: tiktokIcon,
-      },
+  },
   {
     id: 3,
-    label: "youtube",
+    label: 'youtube',
     src: youtubeIcon,
   },
   {
     id: 4,
-    label: "x",
+    label: 'x',
     src: xIcon,
   },
 ];
 
-export {copyright, icons};
+export { copyright, icons };

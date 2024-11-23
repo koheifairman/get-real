@@ -1,20 +1,22 @@
-import { useState } from "react";
-import TopSubtitle from "./TopSubtitle";
-import TopGender from "./TopGender";
-import TopShape from "./TopShape";
-import TopAge from "./TopAge";
-import TopHeight from "./TopHeight";
-import TopIncome from "./TopIncome";
-import TopResult from "./TopResult";
+import { useRatios } from '@/contexts/useRatios';
+import TopSubtitle from './TopSubtitle';
+import TopGender from './TopGender';
+import TopShape from './TopShape';
+import TopAge from './TopAge';
+import TopHeight from './TopHeight';
+import TopIncome from './TopIncome';
+import TopResult from './TopResult';
 
 const TopMain = () => {
+  // STATE
+  const { ageRange, setAgeRange } = useRatios();
   return (
     <>
       <div className="top-main">
         <TopSubtitle />
         <TopGender />
         <TopShape />
-        <TopAge />
+        <TopAge ageRange={ageRange} setAgeRange={setAgeRange} />
         <TopHeight />
         <TopIncome />
         <TopResult />
@@ -31,4 +33,4 @@ const TopMain = () => {
 
 export default TopMain;
 
-TopMain.displayName = "../components/top/TopMain";
+TopMain.displayName = '../components/top/TopMain';

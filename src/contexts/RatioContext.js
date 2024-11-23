@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from 'react';
 
 // Context作成
 const RatioContext = createContext();
@@ -12,7 +12,20 @@ export const RatioProvider = ({ children }) => {
   const [incomeRatio, setIncomeRatio] = useState(undefined);
 
   return (
-    <RatioContext.Provider value={{ genderRatio, setGenderRatio, shapeRatio, setShapeRatio, ageRatio, setAgeRatio, heightRatio, setHeightRatio, incomeRatio, setIncomeRatio }}>
+    <RatioContext.Provider
+      value={{
+        genderRatio,
+        setGenderRatio,
+        shapeRatio,
+        setShapeRatio,
+        ageRatio,
+        setAgeRatio,
+        heightRatio,
+        setHeightRatio,
+        incomeRatio,
+        setIncomeRatio,
+      }}
+    >
       {children}
     </RatioContext.Provider>
   );
@@ -21,4 +34,4 @@ export const RatioProvider = ({ children }) => {
 // Contextを利用するフック
 export const useRatio = () => useContext(RatioContext);
 
-RatioContext.displayName = "../contexts/RatioContext";
+RatioProvider.displayName = '../contexts/RatioContext';

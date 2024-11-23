@@ -1,6 +1,6 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import { copyright, icons } from "@/datas/global/globalFooter";
+import { copyright, icons } from '@/datas/global/globalFooter';
 
 const GlobalFooter = () => {
   return (
@@ -12,12 +12,7 @@ const GlobalFooter = () => {
             return (
               <div key={iconArg.id} className="list-item">
                 <div className="icon-circle">
-                  <Image
-                    src={iconArg.src}
-                    alt={iconArg.label}
-                    width={18}
-                    height={18}
-                  />
+                  <Image src={iconArg.src} alt={iconArg.label} width={18} height={18} />
                 </div>
               </div>
             );
@@ -40,7 +35,7 @@ const GlobalFooter = () => {
         }
         .copyright {
           color: #575757;
-          font-family: "Robot";
+          font-family: 'Robot';
         }
         .icon-list {
           display: flex;
@@ -70,4 +65,4 @@ const GlobalFooter = () => {
 };
 export default GlobalFooter;
 
-GlobalFooter.displayName = "../components/GlobalFooter";
+GlobalFooter.displayName = '../components/GlobalFooter';

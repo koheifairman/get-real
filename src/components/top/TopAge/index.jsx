@@ -1,14 +1,14 @@
-import AgeSlider from "@/components/custom/AgeSlider";
-import { title } from "@/datas/top/age";
+import { title } from '@/datas/top/age';
+import AgeSlider from './AgeSlider';
 
-const TopAge = () => {
+const TopAge = ({ ageRange, setAgeRange }) => {
   return (
     <>
       <div className="top-age">
         <div className="top-container">
           <div className="section-title">{title}</div>
           <div className="slider-container">
-            <AgeSlider />
+            <AgeSlider ageRange={ageRange} setAgeRange={setAgeRange} />
           </div>
         </div>
       </div>
@@ -27,4 +27,4 @@ const TopAge = () => {
 
 export default TopAge;
 
-TopAge.displayName = "../components/top/TopAge";
+TopAge.displayName = '../components/top/TopAge';

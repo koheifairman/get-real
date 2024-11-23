@@ -1,33 +1,33 @@
-import Slider from "@mui/material/Slider";
-import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
-import { useState, useEffect } from "react";
-import getHeightRatio from "@/calculation/heightProcess";
-import { useRatio } from "@/contexts/RatioContext";
+import Slider from '@mui/material/Slider';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import { useState, useEffect } from 'react';
+import getHeightRatio from '@/calculation/heightProcess';
+import { useRatio } from '@/contexts/RatioContext';
 
 const Style = styled(Slider)({
-  color: "#DB7C99",
-  height: 6,
-  "& .MuiSlider-thumb": {
-    height: 24,
-    width: 24,
-    border: "2px solid #FFFFFF",
-    "&:hover": {
-      boxShadow: "0 0 0 8px rgba(233, 30, 99, 0.16)",
+  'color': '#DB7C99',
+  'height': 6,
+  '& .MuiSlider-thumb': {
+    'height': 24,
+    'width': 24,
+    'border': '2px solid #FFFFFF',
+    '&:hover': {
+      boxShadow: '0 0 0 8px rgba(233, 30, 99, 0.16)',
     },
   },
-  "& .MuiSlider-rail": {
-    color: "#E8E9EC",
+  '& .MuiSlider-rail': {
+    color: '#E8E9EC',
     opacity: 1,
     height: 6,
   },
   // 左端マークラベル調整
   '& .MuiSlider-markLabel[data-index="0"]': {
-    transform: "translateX(-40%)",
+    transform: 'translateX(-40%)',
   },
   // 右端マークラベル調整
   '& .MuiSlider-markLabel[data-index="1"]': {
-    transform: "translateX(-70%)",
+    transform: 'translateX(-70%)',
   },
 });
 
@@ -57,8 +57,8 @@ const HeightSlider = () => {
         max={190}
         valueLabelDisplay="on" // 現在値を表示
         marks={[
-          { value: 150, label: "150cm" },
-          { value: 190, label: "190cm" },
+          { value: 150, label: '150cm' },
+          { value: 190, label: '190cm' },
         ]}
       />
     </Box>
@@ -67,4 +67,4 @@ const HeightSlider = () => {
 
 export default HeightSlider;
 
-HeightSlider.displayName = "../components/custom/HeightSlider";
+HeightSlider.displayName = '../components/custom/HeightSlider';
